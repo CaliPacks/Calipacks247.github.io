@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cali Packs 24/7 | Premium THC & Hemp Products</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #4a8f29;  /* Natural green */
+      --secondary: #6c9e3e;
+      --dark: #1a2e0a;
+      --light: #f8f9fa;
+      --accent: #e9c46a;
+      --text: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .logo span {
+      color: var(--secondary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links .btn {
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+
+    .nav-links .btn:hover {
+      background: var(--secondary);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-btn {
+      background: var(--accent);
+      color: var(--dark);
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hero-btn:hover {
+      background: #f1b434;
+    }
+
+    /* Products Section */
+    .products {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .section-subtitle {
+      color: #666;
+      margin-bottom: 3rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-img {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .product-info {
+      padding: 1.5rem;
+    }
+
+    .product-name {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-price {
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .add-to-cart {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .add-to-cart:hover {
+      background: var(--secondary);
+    }
+
+    /* About & Legal Disclaimer */
+    .about {
+      background: #f1f8e9;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .legal-disclaimer {
+      background: var(--dark);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .social-icons {
+      margin-bottom: 2rem;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Cali<span>Packs</span></div>
+      <div class="nav-links">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Premium THC & Hemp Products</h1>
+      <p>Discover natural wellness with our organic thc extracts.</p>
+      <button class="hero-btn">Shop Now</button>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <h2 class="section-title">Our Products</h2>
+    <p class="section-subtitle">Lab-tested for purity and potency</p>
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1601575450967-379b50f8201a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="product-info">
+          <h3 class="product-name">Hubba Bubba</h3>
+          <p class="product-price">$900.00 Lb</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1606305465765-1e0c47fa6e6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="product-info">
+          <h3 class="product-name">Glass Dragon Lb</h3>
+          <p class="product-price">$800.00 Lb</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1601575450967-379b50f8201a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="product-info">
+          <h3 class="product-name">Gelato 42</h3>
+          <p class="product-price">$600.00 Lb</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <h2 class="section-title">Our Mission</h2>
+      <p>At Cali Packs 24/7, we believe in the power of nature to promote health and well-being. Our THC and hemp products are sourced from organic farms and rigorously tested to ensure the highest quality.</p>
+    </div>
+  </section>
+
+  <!-- Legal Disclaimer -->
+  <div class="legal-disclaimer">
+    <p>**Disclaimer:** Our hemp products contain less than 0.3% THC and comply with the 2018 Farm Bill. These statements have not been evaluated by the FDA. Our products are not intended to diagnose, treat, cure, or prevent any disease.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#">FAQ</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p class="copyright">© 2025 Cali Packs 24/7. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple cart functionality (for demo)
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        const productName = button.parentElement.querySelector('.product-name').textContent;
+        alert(`${productName} added to cart!`);
+      });
+    });
+  </script>
+</body>
+</html>
